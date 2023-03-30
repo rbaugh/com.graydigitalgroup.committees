@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+	<base>CRM/Committees</base>
+	<class>CommitteeRole</class>
+	<name>civicrm_committee_role</name>
+	<comment>FIXME</comment>
+	<log>true</log>
+
+	<field>
+		<name>id</name>
+		<type>int unsigned</type>
+		<required>true</required>
+		<comment>Unique CommitteeRole ID</comment>
+		<html>
+		<type>Number</type>
+		</html>
+	</field>
+	<primaryKey>
+		<name>id</name>
+		<autoincrement>true</autoincrement>
+	</primaryKey>
+	<field>
+		<name>name</name>
+		<type>varchar</type>
+		<import>true</import>
+		<title>Role Name</title>
+		<headerPattern>/(committee-role.)?name$/i</headerPattern>
+		<length>255</length>
+		<localizable>true</localizable>
+		<comment>Committee Role (e.g. Chair)</comment>
+		<html>
+			<label>Title</label>
+			<type>Text</type>
+		</html>
+	</field>
+	<field>
+		<name>is_active</name>
+		<title>Role Is Active</title>
+		<type>boolean</type>
+		<comment>Is this committee role enabled?</comment>
+		<html>
+			<type>CheckBox</type>
+		</html>
+	</field>
+
+</table>
